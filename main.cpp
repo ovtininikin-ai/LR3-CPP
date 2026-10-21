@@ -122,7 +122,8 @@ void task_geom10()
     bool brownRight2 = (y < line && !inCircle && x <= 0);
 
     // Перевірка належності коричневій області
-    bool result = inSquare && (brownLeft || brownRight);
+    bool result = inSquare &&
+              (brownLeft || brownRight || brownRight2);
 
     // Виведення результату
     if (result)
