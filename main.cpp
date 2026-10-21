@@ -116,10 +116,10 @@ void task_geom10()
     double line = x - a / 2;
 
     // Коричнева область під похилою прямою всередині круга
-    bool brownLeft = (y < line && inCircle);
+    bool brownRight = (y > line && !inCircle && x >= 0);
 
     // Коричнева область над похилою прямою поза кругом
-    bool brownRight = (y > line && !inCircle);
+    bool brownRight2 = (y < line && !inCircle && x <= 0);
 
     // Перевірка належності коричневій області
     bool result = inSquare && (brownLeft || brownRight);
